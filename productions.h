@@ -121,36 +121,11 @@ void tipsWrite()
         {
         case TOK_IDENT:
             output_lexeme();
-
-            if (!first_of_factor())
-                throw "903: illegal type of factor";
-            //check symbol table to make sure ident is declared or if it is declared twice
-
-            for (itr = symbolTable.begin(); itr != symbolTable.end(); ++itr)
-            {
-                string temp;
-                temp = string(*itr);
-                if (temp == yytext)
-                {
-                    ++declNo;
-                }
-            }
-            if (declNo == 0)
-                throw "104: identifier not declared";
-
-            --declNo;
-
-            if (declNo > 1)
-                throw "101: identifier declared twice";
-            output_lexeme();
-            factor();
-
             nextToken = yylex();
             break;
 
         case TOK_STRINGLIT:
             output_lexeme();
-
             nextToken = yylex();
             break;
 

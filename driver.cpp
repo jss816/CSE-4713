@@ -1,7 +1,7 @@
 //*****************************************************************************
-// driver for TIPS recursive descent parser
+// purpose: driver for Project Part 2 (parser for TIPS)
 //
-// added testing capatabilities with while loops, see <unistd.h> and sleep();
+// change this file header if you modify this file
 //*****************************************************************************
 #ifdef _MSC_VER
 #define _CRT_SECURE_NO_WARNINGS

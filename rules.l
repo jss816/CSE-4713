@@ -75,9 +75,9 @@ int line_number = 1;
 "OR" {return TOK_OR;}
 
  /* Abstractions */
-[A-Z][A-Z0-9]{0,7} {return TOK_IDENT;}
+[A-Z][A-Z0-9_]{0,7} {return TOK_IDENT;}
 [0-9]+ {return TOK_INTLIT;}
-[0-9]+\.[0-9][0-9]* {return TOK_FLOATLIT;}
+[0-9]*\.[0-9]+ {return TOK_FLOATLIT;}
 \'[^\']*\'  {return TOK_STRINGLIT;}
 \^[\0]^\" {return TOK_EOF_SL;}
 
